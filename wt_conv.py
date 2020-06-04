@@ -1,11 +1,9 @@
 wt=float(input("Weight: "))
-z=input("kg or lbs: ")
-q="kg"
-w="lbs"
-if z==q:
+z=input("(K)g or (l)bs: ")
+if z.upper()=="K":
   res=str(wt*2.205)
-  print(res[0:5]+" lbs")
-elif z==w:
+  print(f"It is {res[0:5]} lbs")
+else:
   res=str(wt/2.205)
-  print(res[0:5]+" kg")
+  print(f"It is {res[0:5]} kg")
 
