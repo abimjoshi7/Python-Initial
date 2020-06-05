@@ -1,15 +1,25 @@
-i=0
-while i==10:
-  i+=1
-  start=input("(type help for command list): ")
-  if start=="help":
-    print("start-To start the car \n stop-To stop the car \n quit-To exit")
-  if start=="start":
-    print("car is ready to go")
-  elif start=="stop":
-    print("car is stopped")
-  elif start=="quit":
+comm=""
+started=False
+while True:
+  comm=input(">").lower()
+  if(comm=="start"):
+    if started==True:
+      print('Car already started')
+    else:
+      print("Car starts..")
+      started=True
+  if comm=='stop':
+    if started==True:
+      print("car is stopped")
+      started=False
+    else:
+      print("car not started")
+  if comm=="help":
+    print('''
+start-To start the car
+stop-To stop the car
+quit=To exit
+''')
+  if comm=='quit':
     break
-  else:
-    print("I don't understand")
 
