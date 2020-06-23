@@ -1,25 +1,33 @@
-comm=""
 started=False
+
 while True:
-  comm=input(">").lower()
-  if(comm=="start"):
-    if started==True:
-      print('Car already started')
-    else:
-      print("Car starts..")
-      started=True
-  if comm=='stop':
-    if started==True:
-      print("car is stopped")
-      started=False
-    else:
-      print("car not started")
+  if started==False:
+    comm=input("the car is ready to start...:")
+    if comm=="stop":
+      print("error")
+      continue
+  else:
+    comm=input("the car is started...:")
+    if comm=="start":
+      print("error")
+      continue
+    
+  if comm=="start":
+    print("car starts...")
+    started=True
+  if comm=="stop":
+    print("the car stops")
+    started=False
+  if comm=="exit":
+    break;
   if comm=="help":
     print('''
-start-To start the car
-stop-To stop the car
-quit=To exit
+start-to start the car
+stop-to stop the car
+exit-to exit the game
 ''')
-  if comm=='quit':
-    break
 
+
+    
+
+  
