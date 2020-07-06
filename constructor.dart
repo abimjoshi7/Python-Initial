@@ -3,11 +3,7 @@ class Team {
   double jno;
   String pos;
   
-  Team(name, j, po){
-    pname=name;
-    jno=j;
-    pos=po;
-  }
+  Team(this.pname, this.jno, this.pos);
 
   printdetails() {
     print('${pname} ${jno} ${pos}');
